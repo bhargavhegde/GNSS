@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  ros_recorder:
+    build: .
+    network_mode: "host" # Use host network to see LiDAR and GNSS streams natively
+    privileged: true
+    volumes:
+      - ./data:/root/workspace/data
+    environment:
+      - ROS_DOMAIN_ID=0
+    stdin_open: true # Allows for clean shutdown
+    tty: true # when hitting Ctrl+C
