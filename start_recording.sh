@@ -2,7 +2,7 @@
 set -e
 
 # NOTE: Update these IP variables to match your actual hardware before running
-OUSTER_IP="192.168.1.10"
+OUSTER_IP="169.254.189.131"
 GNSS_IP="169.254.56.64"
 
 source /opt/ros/humble/setup.bash
